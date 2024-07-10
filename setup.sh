@@ -58,4 +58,24 @@ echo $PASSWORD | sudo realm join -U demo 193.228.225.131
 
 sudo apt autoremove -y
 
-php -v
+prompt_restart() {
+    while true; do
+        read -p "Do you want to restart now? [y/n]: " yn
+        case $yn in
+            [Yy]* ) 
+                echo "Restarting now..."
+                sudo reboot
+                break
+                ;;
+            [Nn]* ) 
+                echo "Restart canceled."
+                exit
+                ;;
+            * ) 
+                echo "Please answer y or n."
+                ;;
+        esac
+    done
+}
+
+prompt_restart
