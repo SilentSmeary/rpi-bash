@@ -80,7 +80,7 @@ sudo rm -rf local-downloads
 sudo apt autoremove -y
 
 echo -e "${YELLOW}[SYSTEM]${NOCOLOUR} Upgraded"
-
+echo ""
 echo -e "${GREEN}[INSTALLED]${NOCOLOUR} Nala"
 echo -e "${GREEN}[INSTALLED]${NOCOLOUR} Thonny"
 echo -e "${GREEN}[INSTALLED]${NOCOLOUR} Pandas"
@@ -97,13 +97,12 @@ echo -e "${GREEN}[INSTALLED]${NOCOLOUR} sssd-ad"
 echo -e "${GREEN}[INSTALLED]${NOCOLOUR} sssd-tools"
 echo -e "${GREEN}[INSTALLED]${NOCOLOUR} realmd"
 echo -e "${GREEN}[INSTALLED]${NOCOLOUR} adcli"
-
+echo ""
 echo -e "${RED}[REMOVED]${NOCOLOUR} Transmission"
 echo -e "${RED}[REMOVED]${NOCOLOUR} Remmina"
 echo -e "${RED}[REMOVED]${NOCOLOUR} Camera"
 echo -e "${RED}[REMOVED]${NOCOLOUR} Unused Packages"
-
-
+echo ""
 echo -e "${CYAN}[DOMAIN]${NOCOLOUR} Joined tlevel.digital domain"
 echo ""
 
