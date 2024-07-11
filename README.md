@@ -1,5 +1,10 @@
 # rpi-bash
-
+## Usage
+```
+git clone https://github.com/silentsmeary/rpi-bash
+cd mybash
+./setup.sh
+```
 ## Features
 - Upgrade System
 - Install Nala
