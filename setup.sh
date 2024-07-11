@@ -7,7 +7,7 @@ CYAN='\033[0;36m'
 WHITE='\033[0;37m'
 NOCOLOUR='\033[0m' # No Color
 
-sudo apt install nala
+sudo apt install nala -y
 
 sudo nala update
 sudo nala upgrade -y
@@ -22,22 +22,29 @@ sudo nala install chromium-browser -y
 sudo nala install okular -y
 sudo nala install git -y
 
-cd #
-cd Downloads/
+sudo rm -rf local-downloads
+mkdir local-downloads
+
+cd local-downloads/
 wget "https://github.com/shiftkey/desktop/releases/download/release-3.4.2-linux1/GitHubDesktop-linux-arm64-3.4.2-linux1.deb"
 sudo dpkg -i GitHubDesktop-linux-arm64-3.4.2-linux1.deb
 
 wget "https://download.jetbrains.com/webide/PhpStorm-2024.1.4-aarch64.tar.gz"
 sudo tar -xvf PhpStorm-2024.1.4-aarch64.tar.gz
-mv [PhpStorm-241*] [PhpStorm]
-cd /usr/share/applications/
+mv PhpStorm-241.18034.69 PhpStorm
+sudo mv /rpi-bash/local-downloads/PhpStorm /opt/
 sudo wget "https://raw.githubusercontent.com/SilentSmeary/rpi-bash/main/phpstorm.desktop"
+sudo mv /rpi-bash/local-downloads/phpstorm.desktop /usr/share/applications/
 sudo chmod +x /usr/share/applications/phpstorm.desktop
+
+sudo wget "http://192.168.1.99:8000/projectlibre_1.9.3-1.deb"
+sudo dpkg -i projectlibre_1.9.3-1.deb
+sudo apt --fix-broken install
 
 cd #
 
 sudo nala update
-sudo nala upgrade
+sudo nala upgrade -y
 
 sudo nala install apache2 -y
 sudo systemctl enable apache2
@@ -55,9 +62,20 @@ sudo nala install sssd-tools -y
 sudo nala install realmd -y
 sudo nala install adcli -y
 
+nmcli connection show
+
+sudo nmcli connection modify 'James_Extender' ipv4.dns "193.228.225.131 8.8.8.8"
+sudo nmcli connection modify 'James_Extender' ipv4.ignore-auto-dns yes
+
+sudo systemctl restart NetworkManager
+
+nmcli connection show 299b68dc-f772-457d-a4f1-737100455fa7 | grep ipv4.dns:
+
 sudo realm -v discover 193.228.225.131
 PASSWORD="Password123@#!!"
 echo $PASSWORD | sudo realm join -U demo 193.228.225.131
+
+sudo rm -rf local-downloads
 
 sudo apt autoremove -y
 
