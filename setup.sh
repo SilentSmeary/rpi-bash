@@ -15,6 +15,7 @@ sudo nala upgrade -y
 sudo nala remove transmission-gtk -y
 sudo nala remove remmina -y
 sudo nala remove gnome-snapshot -y
+sudo nala remove rhythmbox -y
 
 sudo nala install thonny -y 
 sudo nala install python3-pandas -y
