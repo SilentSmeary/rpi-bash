@@ -43,7 +43,7 @@ sudo dpkg -i projectlibre_1.9.3-1.deb
 sudo apt --fix-broken install -y
 
 sudo mv phpmyadmin/ /opt/
-sudo mv .desktop/phpmyadmin.desktop /usr/share/applications/
+sudo mv /.desktop/phpmyadmin.desktop /usr/share/applications/
 sudo chmod +x /usr/share/applications/phpmyadmin.desktop
 
 sudo nala update
