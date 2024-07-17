@@ -40,7 +40,7 @@ sudo chmod +x /usr/share/applications/phpstorm.desktop
 
 sudo wget "http://192.168.1.99:8000/projectlibre_1.9.3-1.deb"
 sudo dpkg -i projectlibre_1.9.3-1.deb
-sudo apt --fix-broken install
+sudo apt --fix-broken install -y
 
 cd #
 

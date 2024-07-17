@@ -2,7 +2,7 @@
 ## Usage
 ```
 git clone https://github.com/silentsmeary/rpi-bash
-cd mybash
+cd rpi-bash
 ./setup.sh
 ```
 ## Features
