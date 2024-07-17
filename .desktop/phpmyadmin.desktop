@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=/opt/phpmyadmin/phpmyadmin.sh
+Name=phpMyAdmin
+Comment=phpMyAdmin Shortcut
+Icon=/opt/phpmyadmin/phpmyadmin.png
