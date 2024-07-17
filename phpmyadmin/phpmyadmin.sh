@@ -1,0 +1,1 @@
+xdg-open http://www.example.com
