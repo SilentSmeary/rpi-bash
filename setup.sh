@@ -80,7 +80,7 @@ sudo rm -rf local-downloads
 
 sudo apt autoremove -y
 
-echo -e "${YELLOW}[SYSTEM]${NOCOLOUR} Upgraded"
+echo -e "${YELLOW}[SYSTEM]${NOCOLOUR} Whole Upgraded"
 echo ""
 echo -e "${GREEN}[INSTALLED]${NOCOLOUR} Nala"
 echo -e "${GREEN}[INSTALLED]${NOCOLOUR} Thonny"
