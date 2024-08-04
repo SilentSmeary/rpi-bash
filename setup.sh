@@ -44,9 +44,10 @@ sudo wget "http://192.168.1.99:8000/projectlibre_1.9.3-1.deb"
 sudo dpkg -i projectlibre_1.9.3-1.deb
 sudo apt --fix-broken install -y
 
-sudo mv phpmyadmin/ /opt/
-sudo mv /.desktop/phpmyadmin.desktop /usr/share/applications/
-sudo chmod +x /usr/share/applications/phpmyadmin.desktop
+# TODO: Add this later when i've configured mysql server
+# sudo mv phpmyadmin/ /opt/
+# sudo mv /.desktop/phpmyadmin.desktop /usr/share/applications/
+# sudo chmod +x /usr/share/applications/phpmyadmin.desktop
 
 sudo nala update
 sudo nala upgrade -y
