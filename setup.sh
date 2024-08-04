@@ -30,13 +30,15 @@ cd local-downloads/
 wget "https://github.com/shiftkey/desktop/releases/download/release-3.4.2-linux1/GitHubDesktop-linux-arm64-3.4.2-linux1.deb"
 sudo dpkg -i GitHubDesktop-linux-arm64-3.4.2-linux1.deb
 
-wget "https://download.jetbrains.com/webide/PhpStorm-2024.1.4-aarch64.tar.gz"
-sudo tar -xvf PhpStorm-2024.1.4-aarch64.tar.gz
-mv PhpStorm-241.18034.69 PhpStorm
-sudo mv /rpi-bash/local-downloads/PhpStorm /opt/
-sudo wget "https://raw.githubusercontent.com/SilentSmeary/rpi-bash/main/phpstorm.desktop"
-sudo mv /rpi-bash/local-downloads/phpstorm.desktop /usr/share/applications/
-sudo chmod +x /usr/share/applications/phpstorm.desktop
+# wget "https://download.jetbrains.com/webide/PhpStorm-2024.1.4-aarch64.tar.gz"
+# sudo tar -xvf PhpStorm-2024.1.4-aarch64.tar.gz
+# mv PhpStorm-241.18034.69 PhpStorm
+# sudo mv /rpi-bash/local-downloads/PhpStorm /opt/
+# sudo wget "https://raw.githubusercontent.com/SilentSmeary/rpi-bash/main/phpstorm.desktop"
+# sudo mv /rpi-bash/local-downloads/phpstorm.desktop /usr/share/applications/
+# sudo chmod +x /usr/share/applications/phpstorm.desktop
+
+sudo snap install phpstorm --classic
 
 sudo wget "http://192.168.1.99:8000/projectlibre_1.9.3-1.deb"
 sudo dpkg -i projectlibre_1.9.3-1.deb
